@@ -1,0 +1,40 @@
+#content{width: 960px; margin:0 auto; overflow: hidden;     }
+#content>.article1
+{
+    width: 960px; height: 300px; float: left; border: 5px solid lightcoral;
+    background-color: lightgreen;overflow: scroll; margin-bottom: 10px;
+}
+#content>.aside>aside.aside1
+{
+    width: 200px; float: left; padding-top: 20px; 
+    border: 5px solid lightskyblue; background-color: lightpink;
+}
+#content>.aside>aside.aside2{width: 500px; float: left;}
+#content>.aside>aside.aside3
+{
+    width: 200px; float: right; padding-top: 20px;
+    border: 5px solid gray; background-color: salmon;
+}
+
+div.aside
+{
+    width: 960px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.box
+{
+    width: 100px; height: 100px; border: 5px solid black;
+    margin-top: 50px; margin-left: 100px; overflow: hidden;
+}
+
+
+h1{text-align: center; padding-bottom: 20px;}
+
+#main_footer
+{
+    width: 960px; margin: 0 auto; margin-bottom: 10px;
+    box-sizing: border-box; border: 2px solid black;
+    text-align: center; padding-top: 5px; padding-bottom: 5px;
+}
