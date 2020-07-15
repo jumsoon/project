@@ -15,6 +15,13 @@ function createBulkTodos() {
   return array;
 }
 
+function todoReducer(todos, action) {
+  switch (action.type) {
+    case 'INSERT':
+      {type: 'INSERT', todo: { id:1, text:'todo', checked: false } }
+  }
+}
+
 const App = () => {
   const [todos, setTodos] = useState(createBulkTodos);
   const nextId = useRef(2501);
@@ -28,29 +35,21 @@ const App = () => {
         text,
         checked: false,
       };
-      setTodos(todos.concat(todo));
+      setTodos(todos => todos.concat(todo));
       nextId.current += 1;
-    },
-    [todos],
-  );
+    },[]);
 
-  const onRemove = useCallback(
-    id => {
-      setTodos(todos.filter(todo => todo.id !== id));
-    },
-    [todos],
-  );
+  const onRemove = useCallback(id => {
+      setTodos(todos => todos.filter(todo => todo.id !== id));
+    },[]);
 
-  const onToggle = useCallback(
-    id => {
-      setTodos(
+  const onToggle = useCallback(id => {
+      setTodos(todos =>
         todos.map(todo =>
           todo.id === id ? { ...todo, checked: !todo.checked } :todo,
           ),
       );
-    },
-    [todos],
-  );
+    },[]);
 
   return (
     <TodoTemplate>
