@@ -12,9 +12,6 @@
     padding: 1rem;
     display: flex;
     align-items: center;
-    &:nth-child(even) {
-        background: #f8f9fa;
-        }
     .checkbox {
         cursor: pointer;
         flex: 1;
