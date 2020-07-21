@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    background-image: url('image/10411.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.canvas {
+    background-color: teal;
+}
