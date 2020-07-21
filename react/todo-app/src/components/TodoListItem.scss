@@ -12,6 +12,9 @@
     padding: 1rem;
     display: flex;
     align-items: center;
+    // &:nth-child(even) {
+    //     background: #f8f9fa;
+    // }
     .checkbox {
         cursor: pointer;
         flex: 1;
@@ -43,8 +46,8 @@
             color: #eabbff;
         }
     }
-    &+& {
-        border-top: 1px solid #dee2e6;
-    }
+    // &+& {
+    //     border-top: 1px solid #dee2e6;
+    // }
  
 }
