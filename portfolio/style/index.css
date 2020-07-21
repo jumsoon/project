@@ -5,9 +5,17 @@
 }
 
 body {
+    height: 100vh;
+    width: auto;
     background-image: url('image/10411.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
+}
+h1 {
+    padding-top: 50%;
+    text-align: center;
+    color: cadetblue;
 }
 
 .canvas {
