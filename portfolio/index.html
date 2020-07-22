@@ -7,23 +7,11 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    <h1>hello</h1>
-    <canvas id="canvas"></canvas>
-
-    <script>
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        ctx.arc(20,20,10,0, Math.PI*2);
-        ctx.fillStyle = "lightcoral";
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.moveTo(50,50);
-        ctx.arcTo(350, 50,350,100,50);
-        // ctx.lineTo(350,200)
-    </script>
+    <div class="index_main">
+        <h1>Hello Young's World</h1>
+        <div class="botton">
+            <span>click me!</span>
+        </div>
+    </div>
 </body>
 </html>
