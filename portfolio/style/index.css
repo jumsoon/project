@@ -1,4 +1,16 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+/* @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'; */
+/* @font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')format('woff');
+    font-weight: normal;
+    font-style: normal; } */
+
+@font-face {
+    font-family: 'Cafe24Dangdanghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+    }
 
 * {
     margin: 0;
@@ -21,10 +33,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Cafe24Dangdanghae', sans-serif;
+    /* display: flex; */
+}
+
+.index_main {
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(83, 83, 83, 0.5);
 }
 
 .botton {
+    top: 20%;
     line-height: 50px;
     height: 50px;
     text-align: center;
@@ -49,8 +75,8 @@ body {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
     border-top-style: solid;
     border-bottom-style: solid;
     border-top-color: rgba(255,255,255,0.5);
@@ -59,7 +85,7 @@ body {
 }
 
 .botton:hover span {
-    letter-spacing: 3px;
+    letter-spacing: 5px;
 }
 
 .botton:hover::before {
@@ -89,8 +115,7 @@ body {
 
 
 h1 {
-    text-align: center;
-    margin-top: 50%;
+    /* text-align: center; */
     color: black;
 }
 
