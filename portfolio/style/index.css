@@ -34,19 +34,18 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     font-family: 'Cafe24Dangdanghae', sans-serif;
-    /* display: flex; */
 }
 
 .index_main {
     margin: 0 auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    width: 80%;
-    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(83, 83, 83, 0.5);
+    background-color: rgba(83, 83, 83, 0.35);
 }
 
 .botton {

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var 함수=function(){
+        //     var output =prompt('숫자를 입력해주세요','숫자');
+        //     alert(output);
+        // }
+        // 함수();
+
+        // function 함수() {alert('함수a');}
+        // function 함수() {alert('함수b');}
+        // 함수();
+
+        // //함수()
+        // var 함수 = function(){alert('함수a');}
+        // var 함수 = function(){alert('함수b');}
+        // 함수();
+
+
+        // function f(x){return x*x;}
+        // alert(f(3));
+
+        // alert('원래매개변수','추가된매개변수')
+        // prompt('원래매개변수')
+
+        // var array1=Array();
+        // var array2=Array(10);
+        // var array3=Array(273,103,57,32)
+        // var array4=Array()
+
+        // alert(array1 + '\n'+array2+'\n'+array3)
+
+
+
+
+
+        // function sum()
+        // {
+        //     alert(typeof(arguments)+':'+arguments.length);
+        // } //sum이라는 함수 호출함,, 내용은 argument의 타입과 길이
+        // sum(1,2,3,4,5,6,7,8,9)
+
+        // //결과값은 오브젝트 9 왜냐하면 배열은 객체자료형
+        // //9개의 매개변수를 sum에 입력했기때문,,
+
+        
+
+        // function sum(){
+        //     var out =0;
+        //     for(var i=0; i<arguments.length; i++)
+        //     { //함수 만들기 arguments의 길이가 i보다 클때 i는 하나씩 증감
+        //      //변수 out에 배열을 더해준다 언제까지? i가 배열의 길이보다 클때까지
+
+        //         out +=arguments[i];
+        //     }
+        //     return out;
+        // }
+
+        // alert(sum(1,2,3,4,5,6,7,8,9));
+
+
+
+
+        // function f(x){return x*x};
+        // var 리턴된값 =f(5);
+        // alert(리턴된값);
+
+
+
+            // function returnf()
+            // {
+            //     alert('문장a');
+            //     return;
+            //     alert('문장b');
+            // }
+            // returnf();
+
+
+
+            // function returnf()
+            // {
+            //     return;
+            //     alert('문장a');
+            //     alert('문장b');
+            // }
+            // var out = returnf();
+            // alert(typeof(out)+':'+out)
+
+
+            // function s(x)
+            // {
+            //     return x*x
+            // }
+            // function pita(w, h)
+            // {
+            //     return Math.sqrt(s(w)+s(h));
+            // }
+            // alert(pita(3,4));
+
+
+            // function sq(wi,he, hypo)
+            // {
+            //     if (wi*he+he*he==hypo * hipo)
+            //     return true;
+            //     else {
+            //         return false;
+            //     }
+            // }
+
+
+
+
+
+            // function callTenTimes(callback)
+            // {
+            //     for (var i=0; i<10; i++)
+            //     callback();
+            // }
+            // var callback=function()
+            // {
+            //     alert('함수호출'
+            //     )
+            // }
+            // callTenTimes(callback)
+
+
+
+
+
+            
+//             function test(name)
+//             {
+//                 var out ='hello'+ name+' ..!';
+//                 return function(){
+//                     alert(out);
+//                 };
+//             }
+//  //           test('javascript')();
+
+//             var test1=test('web');
+//             var test2=test('javascript')
+
+//             test1();
+//             test2();
+
+
+            // setTimeout(function(){
+            //     alert('3초지남ㅎ');
+            // }, 3000); 
+            // //3초지날때마다 경고창 1개씩 ㅎ
+
+
+
+            var intervalID=setInterval(function(){
+                alert('<p>'+new Data()+'<p>');
+            },1000);
+            setTimeout(function(){
+                clearInterval(intervalID);
+            },10000);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
