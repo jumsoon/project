@@ -1,13 +1,10 @@
-@media all and (min-width: 1024px) {
 
-}
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
-
-}
-
-@media all and (min-width: 767px) {
-
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -28,6 +25,112 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
     -ms-transition: none !important;
     transition: none !important;
 }
+
+body, input, select, textarea {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'NeoDunggeunmo', Helvetica, sans-serif;
+    /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
+    font-size: 13pt;
+    font-weight: 200;
+    line-height: 1.65;
+}
+
+@media screen and (max-width: 1280px) {
+
+    body, input, select, textarea {
+        font-size: 12pt;
+    }
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+	border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+	-moz-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-webkit-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-ms-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ffffff;
+    border-bottom-color: transparent;
+}
+
+p {
+    margin: 0 0 2em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 980px) {
+
+    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+        display: none;
+    }
+
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+@media screen and (max-width: 980px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    h1 {
+        font-size: 1.25em;
+    }
+
+}
+
+h2 {
+    font-size: 1.35em;
+}
+
+@media screen and (max-width: 736px) {
+
+    h2 {
+        font-size: 1em;
+    }
+
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.9em;
+}
+
+h6 {
+    font-size: 0.7em;
+}
+
+
 
 .icon {
     text-decoration: none;
@@ -224,6 +327,173 @@ ul.actions.fit.small li {
         padding-top: 0;
     }
 
+}
+
+.thumbnails {
+    display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	position: relative;
+	margin: 0 0 2em -2em;
+}
+
+.thumbnails a {
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+    cursor: pointer;
+    outline: 0;
+    overflow: hidden;
+}
+
+.thumbnails a img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.thumbnails a h3 {
+    margin: 1em;
+}
+
+.thumbnails a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #638dff;
+}
+
+.thumbnails > div {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: calc(100% / 3);
+    padding-left: 2em;
+}
+
+.thumbnails > div > :last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 1280px) {
+
+    .thumbnails {
+        margin: 0 0 2em -1.5em;
+    }
+
+        .thumbnails a {
+            margin: 0 0 1.5em 0;
+        }
+
+        .thumbnails > div {
+            padding-left: 1.5em;
+        }
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .thumbnails h3 {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .thumbnails {
+        display: block;
+    }
+
+        .thumbnails a {
+            margin: 0 0 2em 0 !important;
+        }
+
+        .thumbnails > div {
+            display: block;
+            width: 100%;
+        }
+
+            .thumbnails > div:last-child > :last-child {
+                margin-bottom: 0 !important;
+            }
+
+        .thumbnails h3 {
+            font-size: 1em;
+        }
+
+}
+@media screen and (max-width: 1280px) {
+
+    .thumbnails {
+        margin: 0 0 2em -1.5em;
+    }
+
+        .thumbnails a {
+            margin: 0 0 1.5em 0;
+        }
+
+        .thumbnails > div {
+            padding-left: 1.5em;
+        }
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .thumbnails h3 {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .thumbnails {
+        display: block;
+    }
+
+        .thumbnails a {
+            margin: 0 0 2em 0 !important;
+        }
+
+        .thumbnails > div {
+            display: block;
+            width: 100%;
+        }
+
+            .thumbnails > div:last-child > :last-child {
+                margin-bottom: 0 !important;
+            }
+
+        .thumbnails h3 {
+            font-size: 1em;
+        }
+
+}
+
+.fa-quote-left {
+    margin: auto;
+}
+.fa-quote-left {
+    margin: auto;
 }
 
 .wrapper {
