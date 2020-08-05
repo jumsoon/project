@@ -44,9 +44,9 @@ body {
 }
 .title_main {
     position: relative;
-    font-family: 'KCC-kimhoon';
+    font-family: 'KCC-kimhoon', sans-serif;
     font-size: 100px;
-    color: white;
+    color: rgba(255,255,255,0.8);
     text-align: center;
     display: inline-block;
     left: 50%;
