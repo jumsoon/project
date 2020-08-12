@@ -15,7 +15,106 @@ var needPopup = (function() {
             $(popup.body).on('click','[data-needpopup-show]', function(event) {
 				event.preventDefault();
 				needPopup.show($(this).data('needpopupShow'),$(this));
-			})
+            });
+            
+            $(popup.body).on('click','.needpopup_wrapper .remove, .needpopup_remover', function(event) {
+				event.preventDefault();
+				needPopup.hide();
+            });
+            
+            $(popup.body).on('click','.needpopup_wrapper', function(event) {
+				console.log($(event.target).is('.needpopup_wrapper'));
+				if (!$(event.target).is('.needpopup_wrapper')) return;
+
+				event.preventDefault();
+                if (!popup.options.closeOnOutside) return;
+
+                if ($(event.target).closest('.needpopup').length
+                || $(event.target).is('.needpopup, .remove, .needpopup_remover')) return;
+
+				needPopup.hide();
+            });
+            
+            $(document).keydown(function(event){
+				if (event.which == 27) {
+					needPopup.hide();
+				}
+            })
+            
+            popup.resizeTimeout = 0;
+			popup.resizeAllowed = true;
+			$(popup.window).on('resize',function() {
+                clearTimeout(popup.resizeTimeout);
+				if (popup.resizeAllowed) {
+                    popup.resizeAllowed = false;
+                    needPopup.centrify();
+                    popup.scrollHeight = 
+                    popup.body.scrollHeight > popup.html.scrollHeight ? 
+                    popup.body.scrollHeight : popup.html.scrollHeight,
+                    popup.openHtmlClass = 
+                    popup.scrollHeight > popup.window.innerHeight ? 
+                    'needpopup-opened needpopup-scrolled' : 'needpopup-opened';
+                }
+                popup.resizeTimeout = setTimeout(function() {
+                    popup.resizeAllowed = true;
+                  }, 100);
+            });
+
+            popup.wrapper = document.createElement('div');
+			popup.wrapper.className = 'needpopup_wrapper';
+			popup.body.appendChild(popup.wrapper);
+			popup.wrapper = $(popup.wrapper);
+        },
+
+        show : function(_target, _trigger) {
+            if (!_trigger) {
+				popup.trigger = 0;
+            }
+			else {
+                popup.trigger = _trigger;
+            }
+
+            if (popup.target)
+				needPopup.hide(true);
+			else {
+				popup.scrollTopVal = popup.window.pageYOffset;
+
+				$(popup.body).css({'top': -popup.scrollTopVal});
+				$(popup.html).addClass(popup.openHtmlClass);
+            }
+            
+            popup.target = $(_target);
+
+            popup.options = needPopup.config['default'];
+			if (!!popup.target.data('needpopupOptions'))
+                $.extend( popup.options, needPopup.config[popup.target.data('needpopupOptions')] );
+                
+            popup.minWidth = popup.target.outerWidth();
+            
+            popup.wrapper.append(popup.target);
+			if (popup.options.removerPlace == 'outside')
+				popup.wrapper.after('<a href="#" class="needpopup_remover"></a>');
+			else if (popup.options.removerPlace == 'inside')
+                popup.target.append('<a href="#" class="needpopup_remover"></a>'); 
+                
+            popup.options.onBeforeShow.call(popup,popup.target);
+            
+			popup.target.show();
+			needPopup.centrify();
+
+            setTimeout(function(){
+				popup.target.addClass('opened');
+				popup.options.onShow.call(popup,popup.target);
+			},10);
+		},
+
+
+
+
+
+
+                
+
         }
     }
 });
