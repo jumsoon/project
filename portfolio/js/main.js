@@ -106,15 +106,50 @@ var needPopup = (function() {
 				popup.target.addClass('opened');
 				popup.options.onShow.call(popup,popup.target);
 			},10);
-		},
+        },
+        
+        hide : function(_partial) {
+            popup.target.hide().removeClass('opened');
+            $('.needpopup_remover').remove();
+            if (!_partial) {
 
+				// unblock page scroll
+				$(popup.html).removeClass(popup.openHtmlClass).removeClass('needpopup-overflow');
+				$(popup.body).css({'top': 0}).scrollTop(popup.scrollTopVal);
+				$(popup.html).scrollTop(popup.scrollTopVal);
+            }
+            popup.options.onHide.call(popup,popup.target);
+            popup.target = 0;
+        },
+        
+        centrify : function() {
+            if (popup.target) {
+                if (popup.target.outerHeight() > popup.window.innerHeight) {
+                    popup.target.addClass('stacked');
+                }
+                else {
+					popup.target.removeClass('stacked').css({'margin-top':-popup.target.outerHeight()/2, 'top':'50%'});
+                }
 
+                popup.minWidth = $(popup.html).hasClass('needpopup-overflow');
+                if (popup.minWidth + 30 >= popup.window.innerWidth) {
+                    $(popup.html).addClass('needpopup-overflow');
+                }
+                else {
+                    $(popup.html).removeClass('needpopup-overflow');
+                }
+            }
+        },
 
-
-
-
-                
-
-        }
+        'config' : {
+            'default' : {
+                'removerPlace' : 'inside',
+                'closeOnOutside' : true,
+                onShow : function() {},
+                onBeforeShow: function() {},
+                onHide: function() {}
+            }
+        }                
+    
     }
-});
+})();
