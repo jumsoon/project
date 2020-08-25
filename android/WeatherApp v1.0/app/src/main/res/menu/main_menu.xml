@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/weather_start_menu"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="날씨 서비스 시작" />
+
+    <item
+        android:id="@+id/weather_stop_menu"
+        android:orderInCategory="101"
+        app:showAsAction="never"
+        android:title="날씨 서비스 종료" />
+
+    <item
+        android:id="@+id/home_exit"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_exitapp"
+        android:title="앱 종료" />
+
+</menu>
