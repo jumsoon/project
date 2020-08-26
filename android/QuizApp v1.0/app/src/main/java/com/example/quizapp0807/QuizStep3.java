@@ -22,8 +22,8 @@ public class QuizStep3 extends AppCompatActivity {
         quiz2_x3 = findViewById(R.id.quiz2_x3);
         quiz2next3 = findViewById(R.id.quiz2next3);
         quiz2home3 = findViewById(R.id.quiz2home3);
-        O = findViewById(R.id.jung4);
-        X = findViewById(R.id.ooo4);
+        O = findViewById(R.id.jung5);
+        X = findViewById(R.id.ooo5);
 
         quiz2next3.setEnabled(false);
 
@@ -61,6 +61,7 @@ public class QuizStep3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), QuixStep4.class);
                 startActivity(intent);
+                finish();
             }
         });
 

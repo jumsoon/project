@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QuixStep4"></activity>
+        <activity android:name=".QuizStep5"></activity>
+        <activity android:name=".QuixStep4" />
         <activity android:name=".QuizStep3" />
         <activity android:name=".QuizStep2" />
         <activity android:name=".QuizStep1" />

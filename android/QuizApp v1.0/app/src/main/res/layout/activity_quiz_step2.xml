@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blackbord2"
     tools:context=".QuizStep2">
 
     <TextView
@@ -11,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:fontFamily="@font/bmeljiro"
         android:text="Quiz step 2"
+        android:textColor="#D59F00"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
@@ -20,9 +23,12 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="300dp"
-        android:layout_height="102dp"
+        android:layout_height="130dp"
+        android:background="@drawable/quiz_linebox"
+        android:fontFamily="@font/bmhanna"
         android:gravity="center"
         android:text="갈증이 날때는 바닷물을\n 마셔도 된다."
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +41,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/bmhanna"
         android:text="정답입니다!"
+        android:textColor="#9FCDFF"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
@@ -47,7 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/bmhanna"
         android:text="오답입니다!"
+        android:textColor="#FF9F9f"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
@@ -56,42 +66,42 @@
 
     <Button
         android:id="@+id/quiz2_o"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="84dp"
-        android:text="O"
+        android:background="@drawable/o"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/quiz2_x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="30dp"
-        android:text="X"
+        android:background="@drawable/x"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/quiz2next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="다음퀴즈"
-        app:layout_constraintEnd_toEndOf="@+id/quiz2_x"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/next"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/quiz2_x" />
 
     <Button
         android:id="@+id/quiz2home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="홈으로"
-        app:layout_constraintStart_toStartOf="@+id/quiz2_o"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/home"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/quiz2_o" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
