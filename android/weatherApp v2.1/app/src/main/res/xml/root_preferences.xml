@@ -1,0 +1,70 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+<!--        <EditTextPreference-->
+<!--            app:key="signature"-->
+<!--            app:title="@string/signature_title"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+        <SwitchPreferenceCompat
+            android:icon="@drawable/m_smile"
+            app:key="setting_weather_service"
+            app:title="@string/sync_title"
+            app:summary="1시간 간격으로 선택한 도시의 날씨를 \n서비스 받을 수 있습니다."/>
+
+        <ListPreference
+
+            android:icon="@drawable/m_city"
+            app:defaultValue="대구광역시"
+            app:entries="@array/city_entries"
+            app:entryValues="@array/city_values"
+            app:key="setting_weather_city"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreference
+            android:icon="@drawable/m_shake"
+            app:key="vibrate"
+            app:title="@string/viv_title"
+            app:summary="날씨 알람이 울릴 때, 진동 울림으로 \n알림을 받으려면 체크하세요."/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="프로그램 정보">
+
+        <Preference
+            app:key="version"
+            app:title="JumSoon 전국 날씨정보 v2.1"
+            app:summary="프로그램 버전 정보입니다." />
+
+        <Preference
+            app:key="webpage"
+            app:title="개발자 정보"
+            app:summary="개발자 정보에 대해 확인합니다."/>
+
+        <Preference
+            app:key="mail"
+            android:title="메일보내기"
+            android:summary="개발자에게 메일을 보냅니다.">
+                <intent
+                    android:action="android.intent.action.SENDTO"
+                    android:data="mailto:anwlgid51@gmail.com"/>
+        </Preference>
+
+        <Preference
+            android:defaultValue="false"
+            android:key="checkbox"
+            android:title="이미지 리소스"
+            android:summary="icons8, freepick, pngtree" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

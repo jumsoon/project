@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyWeather0812</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_weather_settings">WeatherSettings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">날씨 서비스 설정</string>
+    <string name="sync_header">세부 설정</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">도시 선택</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">날씨 서비스</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="viv_title">진동 알림</string>
+</resources>
