@@ -471,7 +471,7 @@ ul.actions.fit.small li {
 @media screen and (max-width: 1280px) {
 
     .thumbnails {
-        margin: 0 0 20px 20px;
+        margin: 0 0 20px 0;
     }
 
     .thumbnails .a {
@@ -488,31 +488,6 @@ ul.actions.fit.small li {
 
     .thumbnails h3 {
         font-size: 15px;
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-
-    .thumbnails {
-        display: block;
-    }
-
-    .thumbnails .a {
-        margin: 0 0 20px 0 !important;
-    }
-
-    .thumbnails>div {
-        display: block;
-        width: 100%;
-    }
-
-    .thumbnails>div:last-child> :last-child {
-        margin-bottom: 0 !important;
-    }
-
-    .thumbnails h3 {
-        font-size: 1em;
     }
 
 }
@@ -578,17 +553,17 @@ body.is-covered .wrapper {
 
 #header .modal-content h3 {
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 2px 2px #5882FA;
+    text-shadow: 2px 2px #5883fa65;
 }
 
 #header .modal-content h1 {
     color: rgba(255, 255, 255, 0.8);
-    text-shadow: 2px 2px #5882FA;
+    text-shadow: 2px 2px #00ff9d65;
 }
 
 #header .modal-content h2 {
     color: rgba(238, 255, 2, 0.95);
-    text-shadow: 2px 2px #00ff9d9f;
+    text-shadow: 2px 2px #00ff9d65;
 }
 
 #header .modal-click {
