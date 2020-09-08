@@ -577,8 +577,8 @@ body.is-covered .wrapper {
 }
 
 #header .modal-content h3 {
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 2px 2px midnightblue;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 2px midnightblue;
 }
 
 #header .modal-content h1 {
