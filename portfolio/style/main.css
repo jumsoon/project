@@ -402,7 +402,7 @@ ul.actions.fit.small li {
 
 .thumbnails .a:hover {
     background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #638dff;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 10px 0 #638dff;
 }
 
 .thumbnails>div {
@@ -578,7 +578,7 @@ body.is-covered .wrapper {
 
 #header .modal-content h3 {
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 1px 1px #5882FA;
+    text-shadow: 2px 2px #5882FA;
 }
 
 #header .modal-content h1 {
@@ -587,8 +587,40 @@ body.is-covered .wrapper {
 }
 
 #header .modal-content h2 {
+    color: rgba(238, 255, 2, 0.95);
+    text-shadow: 2px 2px #00ff9d9f;
+}
+
+#header .modal-click {
+    border-radius: 3%;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+#header .modal-click:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 5px 0 #638dff;
+}
+
+#header .modal .close {
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 2px 2px #5882FA;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+#header .close:hover,
+#header .close:focus {
+    color: #5882FA;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
@@ -638,22 +670,67 @@ body.is-covered .wrapper {
 .modal-content {
     position: relative;
     background-color: #fefefe;
-    width: 50%;
+    width: 80%;
     margin: 15% auto;
     padding: 50px;     
     border: 1px solid #666666;                    
 }
 
 .modal .close {
-    color: #aaa;
+    color: #9b9b9b;
     float: right;
     font-size: 48px;
     font-weight: bold;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+@media screen and (min-width: 993px) {
+    #header .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        width: 70%;
+        height: 450px;
+        margin: 15% auto;
+        padding: 50px;     
+        border: 1px solid #666666;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        width: 70%;
+        margin: 15% auto;
+        padding: 50px;     
+        border: 1px solid #666666;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 992px) {
+    #header .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        width: 70%;
+        height: 400px;
+        margin: 15% auto;
+        padding: 50px;     
+        border: 1px solid #666666;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        width: 70%;
+        margin: 15% auto;
+        padding: 50px;     
+        border: 1px solid #666666;
+    }
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #2c2c2c;
     text-decoration: none;
     cursor: pointer;
 }
