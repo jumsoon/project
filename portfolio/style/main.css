@@ -40,6 +40,17 @@ textarea {
 
 @media screen and (max-width: 1200px) {
 
+    body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }
+
     body,
     input,
     select,
@@ -50,6 +61,29 @@ textarea {
     body {
         background-color: black;
         background-image: url("./image/1280px.jpg");
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }
+
+    body {
+        background-color: black;
+        background-image: url("./image/980px.jpg");
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
@@ -72,7 +106,7 @@ textarea {
 
     body {
         background-color: black;
-        background-image: url("./image/back.jpg");
+        background-image: url("./image/480px.jpg");
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
