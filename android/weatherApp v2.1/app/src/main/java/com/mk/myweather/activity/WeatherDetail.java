@@ -3,12 +3,26 @@ package com.mk.myweather.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.charts.LineChart;
+
 import com.mk.myweather.R;
+
+import java.util.ArrayList;
 
 public class WeatherDetail extends AppCompatActivity {
 
@@ -16,11 +30,36 @@ public class WeatherDetail extends AppCompatActivity {
     ImageView w_image;
     LinearLayout w_back;
 
+    private LineChart lineChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_detail);
+
+        lineChart = findViewById(R.id.chart);
+
+        ArrayList<Entry> entry_chart = new ArrayList<>();
+        entry_chart.add(new Entry(1, 1));
+        entry_chart.add(new Entry(2, 3));
+        entry_chart.add(new Entry(4, 5));
+        entry_chart.add(new Entry(5, 1));
+        entry_chart.add(new Entry(4, 2));
+
+        LineDataSet lineDataSet = new LineDataSet(entry_chart, "속성명");
+        lineDataSet.setLineWidth(3);
+        lineDataSet.setCircleRadius(6);
+        lineDataSet.setCircleColor(Color.parseColor("#FFBF00"));
+        lineDataSet.setColor(Color.parseColor("#F5DA81"));
+        lineDataSet.setDrawCircleHole(true);
+        lineDataSet.setDrawCircles(true);
+        lineDataSet.setDrawHorizontalHighlightIndicator(false);
+        lineDataSet.setDrawHighlightIndicators(false);
+        lineDataSet.setDrawValues(false);
+
+        LineData lineData = new LineData(lineDataSet);
+        lineChart.setData(lineData);
+
 
         Intent intent = getIntent();
 

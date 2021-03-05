@@ -36,14 +36,14 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        setTitle("날씨 정보");
-
-        weatherInfo = findViewById(R.id.weatherInfo);
-        weatherStart = findViewById(R.id.startWeather);
-//        weatherStart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                GetXmlTask task =
+//        setTitle("날씨 정보");
+//
+//        weatherInfo = findViewById(R.id.weatherInfo);
+//        weatherStart = findViewById(R.id.startWeather);
+////        weatherStart.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                GetXmlTask task =
 //                        new GetXmlTask();
 //                task.execute("https://www.kma.go.kr/wid/queryDFS.jsp?gridx=89&gridy=90");
 //            }
